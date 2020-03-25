@@ -7,6 +7,7 @@ import QuizPage from '../Quiz/Quiz'
 import ResultsPage from '../Results/Results'
 import LoginPage from '../LoginPage/LoginPage'
 import WishlistPage from '../Wishlist/Wishlist'
+import RegistrationPage from '../RegistrationPage/RegistrationPage'
 import Nav from '../Nav/Nav'
 import './App.css';
 
@@ -36,6 +37,10 @@ class App extends React.Component {
             <PublicOnlyRoute
               path={'/login'}
               component={LoginPage}
+            />
+            <PublicOnlyRoute
+              path={'/register'}
+              component={RegistrationPage}
             />
             <PrivateRoute
               path={'/wishlist'}
