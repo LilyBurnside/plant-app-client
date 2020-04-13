@@ -7,6 +7,9 @@ exports[`Login Page Component renders Login Form 1`] = `
   <h2>
     Login
   </h2>
+  <p>
+    Log in with username: guest and password: password
+  </p>
   <LoginForm
     onLoginSuccess={[Function]}
   />
