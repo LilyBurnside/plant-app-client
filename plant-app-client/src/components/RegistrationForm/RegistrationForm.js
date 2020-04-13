@@ -24,7 +24,7 @@ export default class RegistrationForm extends React.Component {
       })
       .catch(res => {
         this.setState({ error: res.error })
-      })
+      });
 
   }
 
