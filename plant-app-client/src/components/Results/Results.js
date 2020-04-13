@@ -163,7 +163,7 @@ export default class Results extends React.Component {
 
     return(
       <div className="results">
-        <h1>Some plants for you!</h1>
+        <h1>Plants for your space!</h1>
         <p>If you fancy one, add it to your wish list!</p>
         {content}
         <div className="results-plant-list">
