@@ -21,8 +21,8 @@ export default class Quiz extends React.Component {
   handleNextPress = e => {
     e.preventDefault()
     this.context.addAnswer(e.target.answer.value)
-    this.context.setQuestionId()
-    if (this.context.questionId === 5) {
+    this.context.questions.shift()
+    if(this.context.questions.length === 0) {
       this.props.history.push('/results')
     }
   }
@@ -37,6 +37,7 @@ export default class Quiz extends React.Component {
             type="radio" 
             className="answer-option" 
             name="answer"
+            required
             id={i} 
             value={i} 
           />
@@ -50,7 +51,7 @@ export default class Quiz extends React.Component {
 
   render(){
     const { error, questions } = this.context
-    const question = questions.find(q => q.id === this.context.questionId)
+    const question = questions[0]
 
     let button
     if (error) {
